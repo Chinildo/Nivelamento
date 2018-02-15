@@ -4,12 +4,16 @@ function consultar() {
 
     const request = new XMLHttpRequest();
 
-    request.open('GET', `https://api.github.com/users/${userName}`);
+    request.open('GET', `https://api.github.com/users/` + userName);
     request.send();
 
 
-
     request.onload = function() {
+        if (request.status == 404) {
+            document.getElementById('loading').innerHTML = "Usuario não encontrado ";
+            document.getElementById('iBuscar').disabled = true;
+            return null;
+        }
         document.getElementById('loading').style = "opacity:0;"
         const perfil_obj = JSON.parse(request.responseText);
         document.getElementById('name').innerHTML += perfil_obj.name;
@@ -23,8 +27,6 @@ function consultar() {
         document.getElementById('corpo').style = "opacity: 1;"
         document.getElementById('iBuscar').disabled = true;
     }
-
-
 }
 
 function limpar() {
@@ -37,6 +39,8 @@ function limpar() {
     document.getElementById('following').innerHTML = 'Seguindo: ';
     document.getElementById('foto').src = '';
     document.getElementById('corpo').style = "opacity: 0;"
-    document.getElementById('iBuscar').value = ' ';
+    document.getElementById('loading').style = 'opacity: 0;'
+    document.getElementById('loading').innerHTML = 'Carregando';
+    document.getElementById('iBuscar').value = '';
     document.getElementById('iBuscar').disabled = false;
 }

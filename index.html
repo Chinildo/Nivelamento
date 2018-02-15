@@ -12,21 +12,22 @@
 </head>
 
 <body>
-
-    <input type="text" name="buscarNome" id="iBuscar" value="">
-    <input type="button" value="Buscar" onclick="consultar()">
-    <input type="button" value="Limpar Busca" onclick="limpar()">
-    <h1 id="loading">Carregando</h1>
+    <div id="search">
+        <input class='entrada' type="text" name="buscarNome" id="iBuscar" value="">
+        <input class="entrada" type="button" value="Buscar" onclick="consultar()">
+        <input class="entrada" type="button" value="Limpar Busca" onclick="limpar()">
+        <h1 id="loading">Carregando</h1>
+    </div>
     <div id="corpo">
         <p id="name"> Nome: </p>
         <p id="location"> Localização: </p>
-        <p id="criado_em">Criado em:</p>
+        <p id="criado_em">Criado em: </p>
         <p id="public_repos"> Repositorios publicos: </p>
         <p id="public_gists">Gists publicas: </p>
         <p id="followers">followers: </p>
         <p id="following">following: </p>
-        <img src="" id="foto" alt="">
     </div>
+    <img src="" id="foto" alt="">
 </body>
 
 </html>
