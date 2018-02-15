@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba (0, 0, 0, 1);
+}
+
+div#corpo {
+    opacity: 0;
+}
+
+h1#loading {
+    opacity: 0;
+}
+
+img#foto {
+    size: 15 px;
+}

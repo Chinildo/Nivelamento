@@ -7,31 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nivelamento</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" ; />
+
 </head>
 
 <body>
 
     <input type="text" name="buscarNome" id="iBuscar" value="">
     <input type="button" value="Buscar" onclick="consultar()">
-    <!input type="button" value="MostrarHeader" onclick="exibir()">
-    <div>
-
-
-        Nome:
-        <p id="name"> </p>
-        Localização:
-        <p id="location"> </p>
-        Criado em:
-        <p id="criado_em"></p>
-        Repositorios publicos:
-        <p id="public_repos"> </p>
-        Gists publicas:
-        <p id="public_gists"> </p>
-        followers:
-        <p id="followers"> </p>
-        following:
-        <p id="following"> </p>
-
+    <input type="button" value="Limpar Busca" onclick="limpar()">
+    <h1 id="loading">Carregando</h1>
+    <div id="corpo">
+        <p id="name"> Nome: </p>
+        <p id="location"> Localização: </p>
+        <p id="criado_em">Criado em:</p>
+        <p id="public_repos"> Repositorios publicos: </p>
+        <p id="public_gists">Gists publicas: </p>
+        <p id="followers">followers: </p>
+        <p id="following">following: </p>
+        <img src="" id="foto" alt="">
     </div>
 </body>
 
